@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="form-container">
+        <h2>Register</h2>
+        <form  #addfrm="ngForm" (submit)="submitdata()">
+            <label for="name">Username:</label>
+            <input type="text" id="name" name="name" #name="ngModel"  [(ngModel)]="reg.name"required pattern="^[a-zA-Z]+$">
+            <div *ngIf="!name.valid" style="color: red;"></div>
+                <div *ngIf="name.errors?.['pattern']"> 
+                    Username can contains only alphabets 
+                </div>
+
+            <label for="address">Address:</label>
+            <textarea  id="address" name="address"[(ngModel)]="reg.address" required
+            pattern="^[a-zA-Z0-9]+$">
+        <div *ngIf="!address.valid" style="color: red;">
+          <div *ngIf="address.errors?.['required']"> 
+              Address is required  
+          </div>
+          <div *ngIf="address.errors?.['pattern']"> 
+            Address is must required  
+          </div></textarea>
+
+            <label for="mobileno">Mobile No:</label>
+            <input type="text" id="mobileno" name="mobileno"[(ngModel)]="reg.mobileno"  required>
+
+            <label for="emailid">Email:</label>
+            <input type="emailid" id="emailid" name="emailid"[(ngModel)]="reg.emailid" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"[(ngModel)]="reg.password" required>
+
+            <button type="submit" class="btn btn-primary">Register</button>
+            <button type="reset" class="btn btn-danger">Reset</button>
+        </form>
+    </div>
+    <div class="image-container">
+      <br><br><br><br>
+        <img src="../assets/sig.jpg" alt="Registration Image">
+    </div>
+</div>

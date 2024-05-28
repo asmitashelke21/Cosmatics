@@ -1,0 +1,61 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .postcard {
+    width: calc(25% - 20px); /* Adjust margin and width for spacing */
+    background-color: #fdfafa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(36, 34, 34, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .postcard img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  .postcard h2 {
+    font-size: 18px;
+    color: #2f2d2d;
+    margin-bottom: 10px;
+  }
+  .postcard p {
+    font-size: 14px;
+    color: #111010;
+    margin-bottom: 10px;
+  }
+  .postcard .rating {
+    color: #f39c12; /* Change to your preferred rating color */
+  }
+  .postcard .price {
+    font-weight: bold;
+    color: #0b0b0b;
+  }
+  .postcard a.button {
+    display: inline-block;
+    background-color: #1267c9; /* Change to your preferred button color */
+    color: #fff; /* Change to your preferred text color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  .postcard a.button:hover {
+    background-color: #e81080; /* Change to your preferred hover color */
+  }
+  .top-left {
+    position: absolute;
+  top: 32%;
+  left: 22%;
+  font-size: 75px;
+  transform: translate(-50%, -50%);
+  padding: 24px;
+  border-radius: 5px;
+  text-align: center;
+  }
